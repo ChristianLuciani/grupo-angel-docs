@@ -40,17 +40,21 @@ Antes de empezar, verifica que tienes:
 clasp --version
 Resultado esperado: 2.4.x o superior
 Si falla:
-bashnpm install -g @google/clasp
+#bash
+npm install -g @google/clasp
 1.2 Verificar Git
-bashgit --version
+#bash
+git --version
 Resultado esperado: 2.x.x o superior
 1.3 Verificar Node
-bashnode --version
+#bash
+node --version
 Resultado esperado: v18.x.x o superior
 
 PASO 2: Autenticar clasp (5 min)
 2.1 Login
-bashclasp login
+#bash
+clasp login
 Qué pasa:
 
 Se abre navegador
@@ -59,17 +63,20 @@ Acepta permisos
 Mensaje de éxito en terminal
 
 2.2 Verificar autenticación
-bashclasp list
+#bash
+clasp list
 Resultado esperado: Lista de scripts de tu cuenta
 💡 Por qué: clasp necesita OAuth para interactuar con Apps Script API
 ⚠️ Importante: Usa la cuenta de Grupo Angel, NO cuenta personal
 
 PASO 3: Clonar Repositorios (10 min)
 3.1 Navegar a carpeta de trabajo
-bashcd "/Users/eva/cluciani@gmail.com - Google Drive/My Drive/Grupo Angel"
+#bash
+cd "/Users/eva/cluciani@gmail.com - Google Drive/My Drive/Grupo Angel"
 💡 Nota: Esta carpeta ya existe en tu setup
 3.2 Verificar repos existentes
-bashls -la
+#bash
+ls -la
 Deberías ver:
 grupo-angel-apps/
 grupo-angel-docs/
@@ -82,10 +89,12 @@ bashgit clone https://github.com/ChristianLuciani/grupo-angel-docs.git
 
 PASO 4: Configurar Git (5 min)
 4.1 Configurar identidad global (si no está configurado)
-bashgit config --global user.name "Christian Luciani"
+#bash
+git config --global user.name "Christian Luciani"
 git config --global user.email "cluciani@gmail.com"
 4.2 Verificar configuración
-bashgit config --list
+#bash
+git config --list
 Busca estas líneas:
 user.name=Christian Luciani
 user.email=cluciani@gmail.com
@@ -93,7 +102,8 @@ user.email=cluciani@gmail.com
 
 PASO 5: Explorar Estructura (5 min)
 5.1 Ver estructura de apps
-bashcd grupo-angel-apps
+#bash
+cd grupo-angel-apps
 tree -L 2
 Resultado:
 .
@@ -109,7 +119,8 @@ Resultado:
 │   └── CLib/
 └── scripts/
 5.2 Ver estructura de docs
-bashcd ../grupo-angel-docs
+#bash
+cd ../grupo-angel-docs
 tree -L 2
 Resultado:
 .
@@ -130,7 +141,8 @@ Resultado:
 
 PASO 6: Conectar clasp con Scripts (10 min)
 6.1 Listar tus scripts
-bashclasp list
+#bash
+clasp list
 Busca estos IDs:
 
 CLib: 1hysGl2FQqsVDB1KOqkvPg5gLqCaXv4-4RgjvNYYdnlS0_-MamZ2kZ6Ij
@@ -139,7 +151,8 @@ TicketProcessor: 1KU1SHCh1_4MvaNbeInWsj6-RVknSKJmxXtfjIEhuTtfRbBPe3M4FB8tP
 xls2gsheet: 1Y2Ad5IKgaG2_XeV1iqzet71zJrLJqk8GL74b1ZSH6YrQKPz83o1DCUj0
 
 6.2 Clonar un script (ejemplo: CLib)
-bashcd "/Users/eva/cluciani@gmail.com - Google Drive/My Drive/Grupo Angel/grupo-angel-apps/libraries/CLib"
+bash
+cd "/Users/eva/cluciani@gmail.com - Google Drive/My Drive/Grupo Angel/grupo-angel-apps/libraries/CLib"
 
 clasp clone 1hysGl2FQqsVDB1KOqkvPg5gLqCaXv4-4RgjvNYYdnlS0_-MamZ2kZ6Ij
 Qué pasa:
@@ -153,7 +166,8 @@ Ahora puedes editar local y subir cambios
 
 PASO 7: Configurar GitHub Desktop (5 min)
 7.1 Abrir GitHub Desktop
-bashopen -a "GitHub Desktop"
+#bash
+open -a "GitHub Desktop"
 7.2 Agregar repos existentes
 
 File → Add Local Repository
@@ -167,6 +181,7 @@ grupo-angel-apps: Debería estar en main
 grupo-angel-docs: Debería estar en main
 
 💡 Por qué: GitHub Desktop simplifica Git para ADHD (visual, no comandos)
+___
 
 PASO 8: Workflow Híbrido (5 min)
 Cuándo Usar Cada Herramienta
