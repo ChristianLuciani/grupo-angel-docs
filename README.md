@@ -54,6 +54,7 @@ Toda la documentación está en el repo **[grupo-angel-docs](https://github.com/
 
 ---
 
+```plaintext
 grupo-angel-apps/
 ├── 📁 apps/                     # Aplicaciones desplegadas  
 │   ├── 📁 TicketProcessor/     # OCR de tickets (PROD)
@@ -63,9 +64,9 @@ grupo-angel-apps/
 │   ├── 📁 CLib/               # Core logic (Auth, Services, ETL)
 │   ├── 📁 AngelStyle/         # UI/UX components
 │   └── 📁 XUtil/              # Utilidades extendidas
-├── 📁 scripts/                 # Scriptos auxiliares
+├── 📁 scripts/                 # Scripts auxiliares
 └── 📁 backups/                 # Respaldos manuales
-
+```
 ---
 
 ## 🛠️ Stack Tecnológico
