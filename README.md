@@ -54,18 +54,17 @@ Toda la documentación está en el repo **[grupo-angel-docs](https://github.com/
 
 ---
 
-## 🏗️ Estructura del Proyecto
 grupo-angel-apps/
-├── apps/ # Aplicaciones desplegadas  
-│ ├── TicketProcessor/ # OCR de tickets (PROD)
-│ ├── xls2gsheet/ # Conversor XLS→Sheets (PROD)
-│ └── CasinoETL/ # ETL archivos casino  
-├── libraries/ # Librerías compartidas
-│ ├── CLib/ # Core logic (Auth, Services, ETL)
-│ └── AngelStyle/ # UI/UX components
-│ └── XUtil/ # Utilidades extendidas
-├── scripts/ # Scripts auxiliares
-└── backups/ # Respaldos manuales
+├── 📁 apps/                     # Aplicaciones desplegadas  
+│   ├── 📁 TicketProcessor/     # OCR de tickets (PROD)
+│   ├── 📁 xls2gsheet/          # Conversor XLS→Sheets (PROD)
+│   └── 📁 CasinoETL/           # ETL archivos casino  
+├── 📁 libraries/               # Librerías compartidas
+│   ├── 📁 CLib/               # Core logic (Auth, Services, ETL)
+│   ├── 📁 AngelStyle/         # UI/UX components
+│   └── 📁 XUtil/              # Utilidades extendidas
+├── 📁 scripts/                 # Scriptos auxiliares
+└── 📁 backups/                 # Respaldos manuales
 
 ---
 
