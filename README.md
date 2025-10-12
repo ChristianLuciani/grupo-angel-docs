@@ -56,12 +56,10 @@ Toda la documentación está en el repo **[grupo-angel-docs](https://github.com/
 
 ## 🏗️ Estructura del Proyecto
 grupo-angel-apps/
-  ├── apps/ # Aplicaciones desplegadas
-  
+
+  ├── apps/ # Aplicaciones desplegadas  
   │ ├── TicketProcessor/ # OCR de tickets (PROD)
-  
   │ ├── xls2gsheet/ # Conversor XLS→Sheets (PROD)
-  
   │ └── CasinoETL/ # ETL archivos casino  
   ├── libraries/ # Librerías compartidas
   │ ├── CLib/ # Core logic (Auth, Services, ETL)
