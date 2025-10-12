@@ -23,7 +23,7 @@
 
 ## 🎯 Objetivo
 
-Crear la **Departamento de Datos, Automatización y AI (DAAI)** con BigQuery como fuente única de verdad, BI centralizado,implementacion de IA y preparación para Machine Learning.
+Crear un **Departamento de Datos, Automatización y AI (DAAI)** con BigQuery como fuente única de verdad, BI centralizado y preparación para Machine Learning.
 
 ---
 
@@ -63,8 +63,10 @@ grupo-angel-apps/
 ├── libraries/ # Librerías compartidas
 │ ├── CLib/ # Core logic (Auth, Services, ETL)
 │ └── AngelStyle/ # UI/UX components
+│ └── XUtil/ # Utilidades extendidas
 ├── scripts/ # Scripts auxiliares
 └── backups/ # Respaldos manuales
+code
 ---
 
 ## 🛠️ Stack Tecnológico
@@ -109,6 +111,16 @@ UI/UX components con AI-Modern Dark Theme:
 *   ✨ Glassmorphism effects
 
 [Ver documentación completa](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/angelstyle-api.md)
+
+### XUtil v0.1.0
+**ID**: `1v456789012345678901234567890123456789012345678901234567890` (Placeholder)
+
+Utilidades extendidas y funciones auxiliares:
+*   ⚙️ Funciones de validación de datos
+*   🔗 Utilidades de URL y JSON
+*   ⏱️ Funciones de tiempo y fecha
+
+[Ver documentación completa](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/xutil-api.md)
 
 ---
 
