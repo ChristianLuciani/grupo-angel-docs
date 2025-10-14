@@ -137,11 +137,11 @@ small, .small-text {
 
 **Por Qué Lexend**
 
-✅ Diseñada para legibilidad (ideal para dislexia)
-✅ Espaciado generoso entre letras
-✅ Formas de letras distintivas
-✅ Variable font (weights 300-800)
-✅ Moderna y profesional
+- ✅ Diseñada para legibilidad (ideal para dislexia)
+- ✅ Espaciado generoso entre letras 
+- ✅ Formas de letras distintivas 
+- ✅ Variable font (weights 300-800) 
+- ✅ Moderna y profesional 
 
 
 ### 🧩 Componentes v4.0.0 (Actual)
@@ -738,4 +738,10 @@ function showImpersonationBanner(data) {
 
 📖 [System Overview](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/architecture/system-overview.md)
 📖 [CLib API Reference](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/clib-api.md)
-📖 [Creati
+📖 [Creating New App](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/guides/creating-new-app.md)
+💻 AngelStyle Source Code
+🎨 Lexend Font
+
+Última actualización: Octubre 2025
+Mantenido por: Christian Luciani (@ChristianLuciani)
+Versión AngelStyle: v4.0.0 (v5.0.0 en desarrollo)
