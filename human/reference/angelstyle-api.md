@@ -736,12 +736,14 @@ function showImpersonationBanner(data) {
 
 ### 🔗 Links Relacionados
 
-📖 [System Overview](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/architecture/system-overview.md)
-📖 [CLib API Reference](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/clib-api.md)
-📖 [Creating New App](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/guides/creating-new-app.md)
-💻 AngelStyle Source Code
-🎨 Lexend Font
+- 📖 [System Overview](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/architecture/system-overview.md)
+- 📖 [CLib API Reference](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/clib-api.md)
+- 📖 [Creating New App](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/guides/creating-new-app.md)
+- 💻 AngelStyle Source Code
+- 🎨 Lexend Font
 
 Última actualización: Octubre 2025
+
 Mantenido por: Christian Luciani (@ChristianLuciani)
+
 Versión AngelStyle: v4.0.0 (v5.0.0 en desarrollo)
