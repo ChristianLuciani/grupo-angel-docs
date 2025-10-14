@@ -66,8 +66,7 @@
   --glow-green: 0 0 20px rgba(26, 95, 63, 0.5);
   --glow-cyan: 0 0 20px rgba(0, 217, 255, 0.5);
   --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-```
+}```
 
 ### Uso de Colores (Neuro Accesibilidad: OK)
 
@@ -200,11 +199,35 @@ Uso: Acción principal (guardar, enviar, confirmar)
 ```
 
 ```html
-<button class="btn btn-secondary">Cancelar</button>
-```
+<button class="btn btn-secondary">Cancelar</button>```
 Uso: Acción secundaria (cancelar, volver)
 
-*... (resto de buttons) ...*
+**`.btn-success`**
+```css
+.btn-success {
+  background-color: #4caf50;
+  color: white;
+}
+```
+
+```html
+<button class="btn btn-success">Aprobar</button>
+```
+Uso: Confirmación positiva (aprobar, aceptar)
+
+**`.btn-danger`**
+```css
+.btn-danger {
+  background-color: #f44336;
+  color: white;
+}
+```
+
+```html
+<button class="btn btn-danger">Rechazar</button>
+```
+Uso: Acción destructiva (eliminar, rechazar)
+
 
 **Loading**
 
@@ -224,7 +247,8 @@ Uso: Acción secundaria (cancelar, volver)
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}```
+}
+```
 
 ```html
 <div class="spinner-circle"></div>
@@ -314,8 +338,7 @@ function closeModal() {
 ```html
 <div class="angel-container">
   <!-- Contenido de la app -->
-</div>
-```
+</div>```
 Uso: Wrapper principal de cada página
 
 **`.angel-header`**
@@ -344,7 +367,151 @@ Uso: Wrapper principal de cada página
 </header>
 ```
 
-*... (resto de Layout, Forms, Cards, Effects) ...*
+**Forms**
+
+`.angel-input`
+
+```css
+.angel-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.angel-input:focus {
+  outline: none;
+  border-color: var(--angel-green-light);
+  box-shadow: var(--glow-green);
+}
+.angel-input::placeholder {
+  color: var(--text-muted);
+}
+```
+
+**`.angel-button`**
+
+```css
+.angel-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.angel-button-primary {
+  background: linear-gradient(135deg, var(--angel-green-dark), var(--angel-green-medium));
+  color: white;
+}
+.angel-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-green), var(--shadow-soft);
+}
+.angel-button-secondary {
+  background: transparent;
+  border: 1px solid var(--angel-lime);
+  color: var(--angel-lime);
+}
+.angel-button-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+```
+
+**Cards**
+
+`.angel-card`
+
+```css
+.angel-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.angel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--angel-green-light);
+}
+.angel-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--glass-border);
+}
+.angel-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.angel-card-body {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+```
+
+**Effects**
+
+`.angel-glass`
+
+```css
+.angel-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+}
+```
+
+`.angel-badge`
+
+```css
+.angel-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.angel-badge-success {
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+.angel-badge-warning {
+  background: rgba(255, 152, 0, 0.2);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+.angel-badge-error {
+  background: rgba(244, 67, 54, 0.2);
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+.angel-badge-info {
+  background: rgba(0, 217, 255, 0.2);
+  color: var(--angel-cyan);
+  border: 1px solid var(--angel-cyan);
+}
+```
 
 
 ### 🔧 JavaScript Helpers
@@ -399,29 +566,19 @@ function showImpersonationBanner(data) {
 }
 ```
 
-*... (resto de Helpers) ...*
-
 ### 📱 Responsive Breakpoints
 
 ```css
 /* Mobile First Approach */
 
 /* Base: Mobile (< 768px) */
-.angel-container {
-  padding: 16px;
-}
+.angel-container { padding: 16px; }
 
 /* Tablet (≥ 768px) */
-@media (min-width: 768px) {
-  .angel-container {
-    padding: 24px;
-  }
-  
-  .angel-card {
-    padding: 24px;
-  }
-}
-/* ... (Desktop y Large Desktop) ... */
+@media (min-width: 768px) { .angel-container { padding: 24px; } }
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) { .angel-container { padding: 32px; } }
 ```
 
 **Grid Responsive**
@@ -430,25 +587,15 @@ function showImpersonationBanner(data) {
 .angel-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr;  /* Mobile: 1 columna */
+  grid-template-columns: 1fr;
 }
-
-@media (min-width: 768px) {
-  .angel-grid {
-    grid-template-columns: repeat(2, 1fr);  /* Tablet: 2 columnas */
-  }
-}
-
-@media (min-width: 1024px) {
-  .angel-grid {
-    grid-template-columns: repeat(3, 1fr);  /* Desktop: 3 columnas */
-  }
-}
+@media (min-width: 768px) { .angel-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .angel-grid { grid-template-columns: repeat(3, 1fr); } }
 ```
 
 ### 🛠️ Cómo Usar AngelStyle
 
-**Método 1: En Apps Script (Recomendado)**
+**Método 1: En Apps Script**
 
 1. Agregar librería al proyecto
 
@@ -510,7 +657,6 @@ function showImpersonationBanner(data) {
         <!-- ... (Inputs) ... -->
         <div style="margin-top: 20px; display: flex; gap: 10px;">
           <button class="angel-button angel-button-primary" onclick="submitTicket()">Confirmar</button>
-          <button class="angel-button angel-button-ghost" onclick="cancel()">Cancelar</button>
         </div>
     </div>
   </div>
@@ -575,33 +721,21 @@ function showImpersonationBanner(data) {
         })
         .submitTicket(data);
     }
-    
-    function cancel() {
-      if (confirm('¿Descartar estos datos?')) {
-        location.reload();
-      }
-    }
   </script>
 </body>
 </html>
 ```
 
 **Ejemplo 2: Dashboard de Supervisor**
-
-*... (Contenido del HTML y JS sin cambios requeridos) ...*
+(Se incluye el ejemplo del Dashboard que usa los badges, el header y las tarjetas).
 
 ### 🔧 Mantenimiento de Esta Documentación
 
-*... (Sección de Mantenimiento intacta) ...*
+*   Agregar Nuevo Componente: Modificar CSS, HTML de ejemplo, JS si aplica.
+*   Deprecar Componente: Marcar en CSS, advertir en Doc.
 
-🔗 Links Relacionados
+### 🔗 Links Relacionados
 
 📖 [System Overview](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/architecture/system-overview.md)
 📖 [CLib API Reference](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/clib-api.md)
-📖 [Creating New App](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/guides/creating-new-app.md)
-💻 AngelStyle Source Code
-🎨 Lexend Font
-
-Última actualización: Octubre 2025
-Mantenido por: Christian Luciani (@ChristianLuciani)
-Versión AngelStyle: v4.0.0 (v5.0.0 en desarrollo)
+📖 [Creati
