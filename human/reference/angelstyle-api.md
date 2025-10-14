@@ -138,11 +138,11 @@ small, .small-text {
 
 **Por Qué Lexend**
 
-✅ Diseñada para legibilidad (ideal para dislexia) 
-✅ Espaciado generoso entre letras 
-✅ Formas de letras distintivas 
-✅ Variable font (weights 300-800) 
-✅ Moderna y profesional 
+- ✅ Diseñada para legibilidad (ideal para dislexia)
+- ✅ Espaciado generoso entre letras 
+- ✅ Formas de letras distintivas 
+- ✅ Variable font (weights 300-800) 
+- ✅ Moderna y profesional 
 
 
 ### 🧩 Componentes v4.0.0 (Actual)
