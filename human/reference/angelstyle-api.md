@@ -1,1 +1,607 @@
-# 🎨 AngelStyle API Reference\n\n> Documentación completa de componentes UI/UX v4.0.0 y AI-Modern Dark Theme\n\n---\n\n## 📋 Índice Rápido\n\n### 🎨 [Paleta de Colores](#paleta-de-colores)\n### 🔤 [Tipografía](#tipografía)\n### 🧩 [Componentes v4.0.0 (Actual)](#componentes-v40-actual)\n- [Buttons](#buttons)\n- [Loading](#loading)\n- [Modals](#modals)\n- [Utilities](#utilities)\n\n### ✨ [Componentes v5.0.0 (AI-Modern Dark)](#componentes-v50-ai-modern-dark)\n- [Layout](#layout)\n- [Forms](#forms)\n- [Cards](#cards)\n- [Effects](#effects)\n\n### 🔧 [JavaScript Helpers](#javascript-helpers)\n### 📱 [Responsive Breakpoints](#responsive-breakpoints)\n### 🛠️ [Cómo Usar AngelStyle](#cómo-usar-angelstyle)\n\n---\n\n## 🎨 Paleta de Colores\n\n### Colores Corporativos (AI-Modern Dark Theme)\n```css\n:root {\n  /* Verdes Grupo Angel */\n  --angel-green-dark: #1a5f3f;      /* Primario corporativo */\n  --angel-green-medium: #2d8659;    /* Hover states */\n  --angel-green-light: #4a9d6f;     /* Borders, accents */\n  \n  /* Acento distintivo */\n  --angel-lime: #a8b446;            /* CTAs secundarios */\n  \n  /* Tech/AI */\n  --angel-cyan: #00d9ff;            /* Elementos tech, AI indicators */\n  \n  /* Backgrounds */\n  --bg-primary: #0a0f0d;            /* Fondo principal */\n  --bg-secondary: #151a17;          /* Cards, panels */\n  --bg-tertiary: #1f2621;           /* Inputs, modals */\n  \n  /* Text */\n  --text-primary: #e8f5e9;          /* Texto principal */\n  --text-secondary: #a5d6a7;        /* Texto secundario */\n  --text-muted: #66bb6a;            /* Placeholders, hints */\n  \n  /* Status */\n  --success: #4caf50;\n  --warning: #ff9800;\n  --error: #f44336;\n  --info: var(--angel-cyan);\n  \n  /* Glassmorphism */\n  --glass-bg: rgba(26, 95, 63, 0.1);\n  --glass-border: rgba(74, 157, 111, 0.2);\n  \n  /* Shadows & Glows */\n  --glow-green: 0 0 20px rgba(26, 95, 63, 0.5);\n  --glow-cyan: 0 0 20px rgba(0, 217, 255, 0.5);\n  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);\n}\n```\n\n### Uso de Colores (Neuro Accesibilidad: OK)\n\n| Color | Uso Recomendado | Ejemplo |\n| :--- | :--- | :--- |\n| `--angel-green-dark` | Botones primarios, headers | `Login button, nav bar` |\n| `--angel-green-medium` | Hover states, focus | `Button hover` |\n| `--angel-lime` | CTAs secundarios, badges | `\"Ver más\", status badges` |\n| `--angel-cyan` | Indicadores AI/tech, links | `\"Procesando con AI...\"` |\n| `--bg-primary` | Fondo de página | `body background` |\n| `--bg-secondary` | Cards, contenedores | `.angel-card` |\n\n\n### 🔤 Tipografía\nFuente: **Lexend**\n\n```html\n<!-- Incluir en <head> -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap\" rel=\"stylesheet\">\n```\n\n```css\nbody {\n  font-family: 'Lexend', sans-serif;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 1.6;\n  color: var(--text-primary);\n}\n```\n\n**Jerarquía Tipográfica**\n\n```css\nh1 {\n  font-size: 2.5rem;      /* 40px */\n  font-weight: 700;\n  letter-spacing: -0.02em;\n}\n\nh2 {\n  font-size: 2rem;        /* 32px */\n  font-weight: 600;\n}\n\n/* ... (resto de h3, h4, p, small) ... */\n```\n\n**Por Qué Lexend**\n\n✅ Diseñada para legibilidad (ideal para dislexia)\n✅ Espaciado generoso entre letras\n✅ Formas de letras distintivas\n✅ Variable font (weights 300-800)\n✅ Moderna y profesional\n\n\n### 🧩 Componentes v4.0.0 (Actual)\n⚠️ Nota: Estos son los componentes actuales. Ver sección v5.0.0 para nuevos componentes.\n\n**Buttons**\n\n`.btn` (Base)\n\n```css\n.btn {\n  display: inline-block;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 4px;\n  font-size: 16px;\n  font-weight: 500;\n  text-align: center;\n  cursor: pointer;\n  transition: all 0.3s ease;\n}\n```\n```html\n<button class=\"btn\">Base Button</button>\n```\n\n**`.btn-primary`**\n\n```css\n.btn-primary {\n  background-color: #2e7d32;\n  color: white;\n}\n\n.btn-primary:hover {\n  background-color: #1b5e20;\n  transform: translateY(-2px);\n  box-shadow: 0 4px 8px rgba(0,0,0,0.2);\n}\n```\n```html\n<button class=\"btn btn-primary\">Guardar</button>\n```\nUso: Acción principal (guardar, enviar, confirmar)\n\n**`.btn-secondary`**\n\n```css\n.btn-secondary {\n  background-color: #757575;\n  color: white;\n}\n```\n```html\n<button class=\"btn btn-secondary\">Cancelar</button>\n```\nUso: Acción secundaria (cancelar, volver)\n\n*... (resto de buttons) ...*\n\n**Loading**\n\n`.spinner-circle`\n\n```css\n.spinner-circle {\n  border: 4px solid rgba(255,255,255,0.3);\n  border-top: 4px solid #4caf50;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  animation: spin 1s linear infinite;\n  margin: 20px auto;\n}\n\n@keyframes spin {\n  0% { transform: rotate(0deg); }\n  100% { transform: rotate(360deg); }\n}\n```\n```html\n<div class=\"spinner-circle\"></div>\n```\nUso: Indicador de carga durante procesamiento\n\n**Modals**\n\n`.modal-bg`\n\n```css\n.modal-bg {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.7);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 1000;\n}\n```\n```html\n<div class=\"modal-bg hidden\" id=\"myModal\">\n  <div style=\"background: white; padding: 20px; border-radius: 8px;\">\n    <h3>Título del Modal</h3>\n    <p>Contenido...</p>\n    <button class=\"btn btn-primary\" onclick=\"closeModal()\">Cerrar</button>\n  </div>\n</div>\n```\n\n**JavaScript:**\n```javascript\nfunction showModal() {\n  document.getElementById('myModal').classList.remove('hidden');\n}\n\nfunction closeModal() {\n  document.getElementById('myModal').classList.add('hidden');\n}\n```\n\n**Utilities**\n\n`.hidden`\n\n```css\n.hidden {\n  display: none !important;\n}\n```\n\n```html\n<div class=\"spinner-circle hidden\" id=\"loading\"></div>\n\n<script>\n  // Mostrar\n  document.getElementById('loading').classList.remove('hidden');\n  \n  // Ocultar\n  document.getElementById('loading').classList.add('hidden');\n</script>\n```\n\n### ✨ Componentes v5.0.0 (AI-Modern Dark)\n⚠️ Estado: En desarrollo - Templates listos para implementar\n\n**Layout**\n\n`.angel-container`\n\n```css\n.angel-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 20px;\n  background: var(--bg-primary);\n  min-height: 100vh;\n}\n```\n\n```html\n<div class=\"angel-container\">\n  <!-- Contenido de la app -->\n</div>\n```\nUso: Wrapper principal de cada página\n\n**`.angel-header`**\n\n```css\n.angel-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 20px 0;\n  border-bottom: 1px solid var(--glass-border);\n  margin-bottom: 30px;\n}\n```\n\n```html\n<header class=\"angel-header\">\n  <div class=\"angel-logo-container\">\n    <h1>Grupo Angel</h1>\n  </div>\n  <nav>\n    <button class=\"angel-button angel-button-ghost\" onclick=\"handleLogout()\">\n      Salir\n    </button>\n  </nav>\n</header>\n```\n\n*... (resto de Layout, Forms, Cards, Effects) ...*\n\n\n### 🔧 JavaScript Helpers\nFunciones JS incluidas en AngelStyle.\n\n**handleLogout()**\n\n```javascript\nfunction handleLogout() {\n  if (!confirm('¿Seguro que deseas salir?')) return;\n  \n  google.script.run\n    .withSuccessHandler((result) => {\n      if (result.success) {\n        window.top.location.href = result.data.logoutUrl;\n      }\n    })\n    .withFailureHandler((error) => {\n      alert('Error al cerrar sesión: ' + error);\n    })\n    .getLogoutUrl(window.location.href);\n}\n```\nUso en HTML:\n```html\n<button class=\"angel-button angel-button-ghost\" onclick=\"handleLogout()\">\n  Salir\n</button>\n```\n\n**checkImpersonation()**\n\n```javascript\nfunction checkImpersonation() {\n  google.script.run\n    .withSuccessHandler((result) => {\n      if (result.success && result.data.isImpersonating) {\n        showImpersonationBanner(result.data);\n      }\n    })\n    .getUserRole();\n}\n\nfunction showImpersonationBanner(data) {\n  const banner = document.createElement('div');\n  banner.className = 'impersonation-banner';\n  banner.innerHTML = `\n    <p>⚠️ Simulando rol: <strong>${data.impersonatedRole}</strong></p>\n    <button onclick=\"stopImpersonating()\">Detener Simulación</button>\n  `;\n  document.body.prepend(banner);\n}\n```\n\n*... (resto de Helpers) ...*\n\n### 📱 Responsive Breakpoints\n\n```css\n/* Mobile First Approach */\n\n/* Base: Mobile (< 768px) */\n.angel-container {\n  padding: 16px;\n}\n\n/* Tablet (≥ 768px) */\n@media (min-width: 768px) {\n  .angel-container {\n    padding: 24px;\n  }\n  \n  .angel-card {\n    padding: 24px;\n  }\n}\n/* ... (Desktop y Large Desktop) ... */\n```\n\n**Grid Responsive**\n\n```css\n.angel-grid {\n  display: grid;\n  gap: 20px;\n  grid-template-columns: 1fr;  /* Mobile: 1 columna */\n}\n\n@media (min-width: 768px) {\n  .angel-grid {\n    grid-template-columns: repeat(2, 1fr);  /* Tablet: 2 columnas */\n  }\n}\n\n@media (min-width: 1024px) {\n  .angel-grid {\n    grid-template-columns: repeat(3, 1fr);  /* Desktop: 3 columnas */\n  }\n}\n```\n\n### 🛠️ Cómo Usar AngelStyle\n\n**Método 1: En Apps Script (Recomendado)**\n\n1. Agregar librería al proyecto\n\n```json\n// appsscript.json\n{\n  \"dependencies\": {\n    \"libraries\": [\n      {\n        \"userSymbol\": \"AngelStyle\",\n        \"version\": \"4\",\n        \"libraryId\": \"19iLSI3Y48FhoBaL9EwMbktyIYBOLEEMC1hePYoMemm7KkCsJ3vY7eS5S\",\n        \"developmentMode\": false\n      }\n    ]\n  }\n}\n```\n\n2. Incluir en HTML\n\n```html\n<!DOCTYPE html>\n<html>\n  <head>\n    <!-- ... (metas) ... -->\n    \n    <!-- Incluir AngelStyle -->\n    <?!= AngelStyle.getStyles() ?>\n  </head>\n  <body>\n    <div class=\"angel-container\">\n      <button class=\"angel-button angel-button-primary\">\n        Hola Mundo\n      </button>\n    </div>\n  </body>\n</html>\n```\n\n*... (resto del Método 1 y Método 2) ...*\n\n\n### 🎯 Ejemplos Completos\n\n**Ejemplo 1: Formulario de Upload**\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n  <?!= AngelStyle.getStyles() ?>\n</head>\n<body>\n  <div class=\"angel-container\">\n    <!-- ... (Header, Upload Area, Spinner, Preview Div) ... -->\n    \n    <div id=\"preview\" class=\"angel-card hidden\">\n        <!-- ... (Inputs) ... -->\n        <div style=\"margin-top: 20px; display: flex; gap: 10px;\">\n          <button class=\"angel-button angel-button-primary\" onclick=\"submitTicket()\">Confirmar</button>\n          <button class=\"angel-button angel-button-ghost\" onclick=\"cancel()\">Cancelar</button>\n        </div>\n    </div>\n  </div>\n  \n  <script>\n    function handleFile(e) { /* ... (File reading logic) ... */ }\n    function showPreview(result) { /* ... */ }\n    function showError(error) { /* ... */ }\n    \n    function submitTicket() {\n      const data = { /* ... (Collect form data) ... */ };\n      \n      // FIX CRÍTICO APLICADO\n      google.script.run\n        .withSuccessHandler((result) => {\n          if (result.success) {\n            alert('✅ Ticket guardado exitosamente');\n            location.reload();\n          } else {\n            alert('❌ Error: ' + result.error);\n          }\n        })\n        .submitTicket(data);\n    }\n    \n    function cancel() {\n      if (confirm('¿Descartar estos datos?')) {\n        location.reload();\n      }\n    }\n  </script>\n</body>\n</html>\n```\n\n**Ejemplo 2: Dashboard de Supervisor**\n\n*... (Contenido del HTML y JS sin cambios requeridos) ...*\n\n\n### 🔧 Mantenimiento de Esta Documentación\n\n*... (Sección de Mantenimiento intacta) ...*\n\n🔗 Links Relacionados\n\n📖 [System Overview](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/architecture/system-overview.md)\n📖 [CLib API Reference](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/clib-api.md)\n📖 [Creating New App](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/guides/creating-new-app.md)\n💻 AngelStyle Source Code\n🎨 Lexend Font\n\nÚltima actualización: Octubre 2025\nMantenido por: Christian Luciani (@ChristianLuciani)\nVersión AngelStyle: v4.0.0 (v5.0.0 en desarrollo)\n
+# 🎨 AngelStyle API Reference
+
+> Documentación completa de componentes UI/UX v4.0.0 y AI-Modern Dark Theme
+
+---
+
+## 📋 Índice Rápido
+
+### 🎨 [Paleta de Colores](#paleta-de-colores)
+### 🔤 [Tipografía](#tipografía)
+### 🧩 [Componentes v4.0.0 (Actual)](#componentes-v40-actual)
+- [Buttons](#buttons)
+- [Loading](#loading)
+- [Modals](#modals)
+- [Utilities](#utilities)
+
+### ✨ [Componentes v5.0.0 (AI-Modern Dark)](#componentes-v50-ai-modern-dark)
+- [Layout](#layout)
+- [Forms](#forms)
+- [Cards](#cards)
+- [Effects](#effects)
+
+### 🔧 [JavaScript Helpers](#javascript-helpers)
+### 📱 [Responsive Breakpoints](#responsive-breakpoints)
+### 🛠️ [Cómo Usar AngelStyle](#cómo-usar-angelstyle)
+
+---
+
+## 🎨 Paleta de Colores
+
+### Colores Corporativos (AI-Modern Dark Theme)
+```css
+:root {
+  /* Verdes Grupo Angel */
+  --angel-green-dark: #1a5f3f;      /* Primario corporativo */
+  --angel-green-medium: #2d8659;    /* Hover states */
+  --angel-green-light: #4a9d6f;     /* Borders, accents */
+  
+  /* Acento distintivo */
+  --angel-lime: #a8b446;            /* CTAs secundarios */
+  
+  /* Tech/AI */
+  --angel-cyan: #00d9ff;            /* Elementos tech, AI indicators */
+  
+  /* Backgrounds */
+  --bg-primary: #0a0f0d;            /* Fondo principal */
+  --bg-secondary: #151a17;          /* Cards, panels */
+  --bg-tertiary: #1f2621;           /* Inputs, modals */
+  
+  /* Text */
+  --text-primary: #e8f5e9;          /* Texto principal */
+  --text-secondary: #a5d6a7;        /* Texto secundario */
+  --text-muted: #66bb6a;            /* Placeholders, hints */
+  
+  /* Status */
+  --success: #4caf50;
+  --warning: #ff9800;
+  --error: #f44336;
+  --info: var(--angel-cyan);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(26, 95, 63, 0.1);
+  --glass-border: rgba(74, 157, 111, 0.2);
+  
+  /* Shadows & Glows */
+  --glow-green: 0 0 20px rgba(26, 95, 63, 0.5);
+  --glow-cyan: 0 0 20px rgba(0, 217, 255, 0.5);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+```
+
+### Uso de Colores (Neuro Accesibilidad: OK)
+
+| Color | Uso Recomendado | Ejemplo |
+| :--- | :--- | :--- |
+| `--angel-green-dark` | Botones primarios, headers | `Login button, nav bar` |
+| `--angel-green-medium` | Hover states, focus | `Button hover` |
+| `--angel-lime` | CTAs secundarios, badges | `"Ver más", status badges` |
+| `--angel-cyan` | Indicadores AI/tech, links | `"Procesando con AI..."` |
+| `--bg-primary` | Fondo de página | `body background` |
+| `--bg-secondary` | Cards, contenedores | `.angel-card` |
+
+
+### 🔤 Tipografía
+Fuente: **Lexend**
+
+```html
+<!-- Incluir en <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+```
+
+```css
+body {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+```
+
+**Jerarquía Tipográfica**
+
+```css
+h1 {
+  font-size: 2.5rem;      /* 40px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;        /* 32px */
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;      /* 24px */
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;     /* 20px */
+  font-weight: 500;
+}
+
+p, .body-text {
+  font-size: 1rem;        /* 16px */
+  font-weight: 400;
+}
+
+small, .small-text {
+  font-size: 0.875rem;    /* 14px */
+  font-weight: 300;
+}
+```
+
+**Por Qué Lexend**
+
+✅ Diseñada para legibilidad (ideal para dislexia)
+✅ Espaciado generoso entre letras
+✅ Formas de letras distintivas
+✅ Variable font (weights 300-800)
+✅ Moderna y profesional
+
+
+### 🧩 Componentes v4.0.0 (Actual)
+⚠️ Nota: Estos son los componentes actuales. Ver sección v5.0.0 para nuevos componentes.
+
+**Buttons**
+
+`.btn` (Base)
+
+```css
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+```
+
+```html
+<button class="btn">Base Button</button>
+```
+
+**`.btn-primary`**
+
+```css
+.btn-primary {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+```
+
+```html
+<button class="btn btn-primary">Guardar</button>
+```
+Uso: Acción principal (guardar, enviar, confirmar)
+
+**`.btn-secondary`**
+
+```css
+.btn-secondary {
+  background-color: #757575;
+  color: white;
+}
+```
+
+```html
+<button class="btn btn-secondary">Cancelar</button>
+```
+Uso: Acción secundaria (cancelar, volver)
+
+*... (resto de buttons) ...*
+
+**Loading**
+
+`.spinner-circle`
+
+```css
+.spinner-circle {
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid #4caf50;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}```
+
+```html
+<div class="spinner-circle"></div>
+```
+Uso: Indicador de carga durante procesamiento
+
+**Modals**
+
+`.modal-bg`
+
+```css
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+```
+
+```html
+<div class="modal-bg hidden" id="myModal">
+  <div style="background: white; padding: 20px; border-radius: 8px;">
+    <h3>Título del Modal</h3>
+    <p>Contenido...</p>
+    <button class="btn btn-primary" onclick="closeModal()">Cerrar</button>
+  </div>
+</div>
+```
+
+**JavaScript:**
+
+```javascript
+function showModal() {
+  document.getElementById('myModal').classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('myModal').classList.add('hidden');
+}
+```
+
+**Utilities**
+
+`.hidden`
+
+```css
+.hidden {
+  display: none !important;
+}
+```
+
+```html
+<div class="spinner-circle hidden" id="loading"></div>
+
+<script>
+  // Mostrar
+  document.getElementById('loading').classList.remove('hidden');
+  
+  // Ocultar
+  document.getElementById('loading').classList.add('hidden');
+</script>
+```
+
+### ✨ Componentes v5.0.0 (AI-Modern Dark)
+⚠️ Estado: En desarrollo - Templates listos para implementar
+
+**Layout**
+
+`.angel-container`
+
+```css
+.angel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+}
+```
+
+```html
+<div class="angel-container">
+  <!-- Contenido de la app -->
+</div>
+```
+Uso: Wrapper principal de cada página
+
+**`.angel-header`**
+
+```css
+.angel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 30px;
+}
+```
+
+```html
+<header class="angel-header">
+  <div class="angel-logo-container">
+    <h1>Grupo Angel</h1>
+  </div>
+  <nav>
+    <button class="angel-button angel-button-ghost" onclick="handleLogout()">
+      Salir
+    </button>
+  </nav>
+</header>
+```
+
+*... (resto de Layout, Forms, Cards, Effects) ...*
+
+
+### 🔧 JavaScript Helpers
+Funciones JS incluidas en AngelStyle.
+
+**handleLogout()**
+
+```javascript
+function handleLogout() {
+  if (!confirm('¿Seguro que deseas salir?')) return;
+  
+  google.script.run
+    .withSuccessHandler((result) => {
+      if (result.success) {
+        window.top.location.href = result.data.logoutUrl;
+      }
+    })
+    .withFailureHandler((error) => {
+      alert('Error al cerrar sesión: ' + error);
+    })
+    .getLogoutUrl(window.location.href);
+}
+```
+Uso en HTML:
+```html
+<button class="angel-button angel-button-ghost" onclick="handleLogout()">
+  Salir
+</button>
+```
+
+**checkImpersonation()**
+
+```javascript
+function checkImpersonation() {
+  google.script.run
+    .withSuccessHandler((result) => {
+      if (result.success && result.data.isImpersonating) {
+        showImpersonationBanner(result.data);
+      }
+    })
+    .getUserRole();
+}
+
+function showImpersonationBanner(data) {
+  const banner = document.createElement('div');
+  banner.className = 'impersonation-banner';
+  banner.innerHTML = `
+    <p>⚠️ Simulando rol: <strong>${data.impersonatedRole}</strong></p>
+    <button onclick="stopImpersonating()">Detener Simulación</button>
+  `;
+  document.body.prepend(banner);
+}
+```
+
+*... (resto de Helpers) ...*
+
+### 📱 Responsive Breakpoints
+
+```css
+/* Mobile First Approach */
+
+/* Base: Mobile (< 768px) */
+.angel-container {
+  padding: 16px;
+}
+
+/* Tablet (≥ 768px) */
+@media (min-width: 768px) {
+  .angel-container {
+    padding: 24px;
+  }
+  
+  .angel-card {
+    padding: 24px;
+  }
+}
+/* ... (Desktop y Large Desktop) ... */
+```
+
+**Grid Responsive**
+
+```css
+.angel-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;  /* Mobile: 1 columna */
+}
+
+@media (min-width: 768px) {
+  .angel-grid {
+    grid-template-columns: repeat(2, 1fr);  /* Tablet: 2 columnas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .angel-grid {
+    grid-template-columns: repeat(3, 1fr);  /* Desktop: 3 columnas */
+  }
+}
+```
+
+### 🛠️ Cómo Usar AngelStyle
+
+**Método 1: En Apps Script (Recomendado)**
+
+1. Agregar librería al proyecto
+
+```json
+// appsscript.json
+{
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "AngelStyle",
+        "version": "4",
+        "libraryId": "19iLSI3Y48FhoBaL9EwMbktyIYBOLEEMC1hePYoMemm7KkCsJ3vY7eS5S",
+        "developmentMode": false
+      }
+    ]
+  }
+}
+```
+
+2. Incluir en HTML
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- ... (metas) ... -->
+    
+    <!-- Incluir AngelStyle -->
+    <?!= AngelStyle.getStyles() ?>
+  </head>
+  <body>
+    <div class="angel-container">
+      <button class="angel-button angel-button-primary">
+        Hola Mundo
+      </button>
+    </div>
+  </body>
+</html>
+```
+
+*... (resto del Método 1 y Método 2) ...*
+
+
+### 🎯 Ejemplos Completos
+
+**Ejemplo 1: Formulario de Upload**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <?!= AngelStyle.getStyles() ?>
+</head>
+<body>
+  <div class="angel-container">
+    <!-- ... (Header, Upload Area, Spinner, Preview Div) ... -->
+    
+    <div id="preview" class="angel-card hidden">
+        <!-- ... (Inputs) ... -->
+        <div style="margin-top: 20px; display: flex; gap: 10px;">
+          <button class="angel-button angel-button-primary" onclick="submitTicket()">Confirmar</button>
+          <button class="angel-button angel-button-ghost" onclick="cancel()">Cancelar</button>
+        </div>
+    </div>
+  </div>
+  
+  <script>
+    function handleFile(e) { 
+      const file = e.target.files;
+      if (!file) return;
+      
+      // Mostrar loading
+      document.getElementById('loading').classList.remove('hidden');
+      
+      // Leer como base64
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const base64 = event.target.result.split(',');
+        
+        // Llamar backend
+        google.script.run
+          .withSuccessHandler(showPreview)
+          .withFailureHandler(showError)
+          .analyzeTicket(base64);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function showPreview(result) {
+      document.getElementById('loading').classList.add('hidden');
+      
+      if (result.success) {
+        const data = result.data;
+        document.getElementById('amount').value = data.amount;
+        document.getElementById('date').value = data.date;
+        document.getElementById('ticketNumber').value = data.ticketNumber;
+        document.getElementById('preview').classList.remove('hidden');
+      } else {
+        showError(result.error);
+      }
+    }
+    
+    function showError(error) {
+      document.getElementById('loading').classList.add('hidden');
+      alert('Error: ' + error);
+    }
+    
+    function submitTicket() {
+      const data = { 
+        amount: document.getElementById('amount').value,
+        date: document.getElementById('date').value,
+        ticketNumber: document.getElementById('ticketNumber').value
+      };
+      
+      // FIX CRÍTICO APLICADO (LLM Artifact Removed)
+      google.script.run
+        .withSuccessHandler((result) => {
+          if (result.success) {
+            alert('✅ Ticket guardado exitosamente');
+            location.reload();
+          } else {
+            alert('❌ Error: ' + result.error);
+          }
+        })
+        .submitTicket(data);
+    }
+    
+    function cancel() {
+      if (confirm('¿Descartar estos datos?')) {
+        location.reload();
+      }
+    }
+  </script>
+</body>
+</html>
+```
+
+**Ejemplo 2: Dashboard de Supervisor**
+
+*... (Contenido del HTML y JS sin cambios requeridos) ...*
+
+### 🔧 Mantenimiento de Esta Documentación
+
+*... (Sección de Mantenimiento intacta) ...*
+
+🔗 Links Relacionados
+
+📖 [System Overview](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/architecture/system-overview.md)
+📖 [CLib API Reference](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/reference/clib-api.md)
+📖 [Creating New App](https://github.com/ChristianLuciani/grupo-angel-docs/blob/main/human/guides/creating-new-app.md)
+💻 AngelStyle Source Code
+🎨 Lexend Font
+
+Última actualización: Octubre 2025
+Mantenido por: Christian Luciani (@ChristianLuciani)
+Versión AngelStyle: v4.0.0 (v5.0.0 en desarrollo)
