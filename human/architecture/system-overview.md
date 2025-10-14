@@ -58,6 +58,7 @@ graph TB
     CLIB -->|Read/Write| SHEETS
     
     ASTYLE -->|Renders| USER
+    ```
 
 🔍 Detalle por Capa
 CAPA 0: External (Usuarios y Servicios)
