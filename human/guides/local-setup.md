@@ -11,7 +11,7 @@ Al terminar esta guía tendrás:
 ✅ Repos clonados localmente  
 ✅ clasp configurado y autenticado  
 ✅ GitHub Desktop funcional  
-✅ Workflow híbrido listo para usar  
+✅ Workflow híbrido (Cloud & Local) listo para usar  
 ✅ Primera prueba exitosa  
 
 **Tiempo estimado**: 30-45 minutos
@@ -25,8 +25,8 @@ Antes de empezar, verifica que tienes:
 - [x] macOS con Terminal
 - [x] Cuenta Google Workspace (Grupo Angel)
 - [x] Acceso a repos GitHub (grupo-angel-apps, grupo-angel-docs)
-- [x] clasp instalado (ya tienes)
-- [x] GitHub Desktop instalado (ya tienes)
+- [x] clasp instalado 
+- [x] GitHub Desktop instalado 
 - [x] VS Code instalado (recomendado)
 
 ---
