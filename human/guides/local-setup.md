@@ -22,7 +22,7 @@ Al terminar esta guía tendrás:
 
 Antes de empezar, verifica que tienes:
 
-- [x] macOS con Terminal
+- [x] macOS con Terminal (NOTA PARA GUADIAN DE LA DOCUMENTACION CREAR ARCHIVO PARA LA INSTALACION DE LOS PREREQUISITOS PARA LOS DISTINDOS SYSTEMAS OPERATIVO, Y SECCIONES PARA LOS DISTINTOS SISTEMAS OPERATIVOS DE ESTA GUIA)
 - [x] Cuenta Google Workspace (Grupo Angel)
 - [x] Acceso a repos GitHub (grupo-angel-apps, grupo-angel-docs)
 - [x] clasp instalado 
