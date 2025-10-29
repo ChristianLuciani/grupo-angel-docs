@@ -63,7 +63,8 @@ grupo-angel-apps/
 ├── 📁 libraries/               # Librerías compartidas
 │   ├── 📁 CLib/                # Core logic (Auth, Services, ETL)
 │   ├── 📁 AngelStyle/          # UI/UX components
-│   └── 📁 XUtil/               # Utilidades extendidas
+│   ├── 📁 CLUtils/             # Client-Side-Utilities components
+│   └── 📁 XUtil/               # Utilidades extendidas y Librerias Externas
 ├── 📁 scripts/                 # Scripts auxiliares
 └── 📁 backups/                 # Respaldos manuales
 ```
