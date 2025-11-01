@@ -1,12 +1,10 @@
 {
-  "name": "Wiki Documentation Editor (Hugo)",
-  // USAR IMAGEN BASE MÁS ROBUSTA Y PROBADA: Base Debian
+  "name": "Wiki Documentation Editor (Minimal)",
+  // Base Debian: Súper estable, ligera y compatible.
   "image": "mcr.microsoft.com/devcontainers/base:debian",
   
-  // Instalar Hugo como una Feature
-  "features": {
-    "ghcr.io/devcontainers/features/hugo:1": {}
-  },
+  // ELIMINAMOS la feature de Hugo para evitar fallos.
+  // "features": { "ghcr.io/devcontainers/features/hugo:1": {} },
   
   "forwardPorts": [1313],
   
