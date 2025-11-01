@@ -1,0 +1,32 @@
+{
+  "name": "Wiki Documentation Editor (Hugo)",
+  // Usa una imagen de Go/Node, que ya es un buen punto de partida para Hugo
+  "image": "mcr.microsoft.com/devcontainers/go:latest",
+  
+  // Instala Hugo usando una 'feature' predefinida de Codespaces
+  "features": {
+    "ghcr.io/devcontainers/features/hugo:1": {}
+  },
+  
+  // Expone el puerto por defecto de Hugo (1313) para previsualización
+  "forwardPorts": [1313],
+  
+  // Comandos de post-creación si fueran necesarios para temas, aunque no es indispensable
+  // "postCreateCommand": "...", 
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // ESENCIALES PARA MARKDOWN:
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "esbenp.prettier-vscode",
+        
+        // PRODUCTIVIDAD:
+        "hediet.vscode-drawio",
+        "googlecloudtools.cloudcode-gemini"
+      ]
+    }
+  },
+  "remoteUser": "codespace"
+}
