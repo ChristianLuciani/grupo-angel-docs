@@ -37,15 +37,22 @@ Si eres el primer desarrollador en configurar esto y el repositorio aún no tien
     ```
 2.  **Agrega el tema de documentación:** Por convención, usaremos un tema de documentación simple (ejemplo: Ananke):
     ```bash
-    git submodule add [https://github.com/theNewDynamic/gohugo-theme-ananke.git](https://github.com/theNewDynamic/gohugo-theme-ananke.git) themes/ananke
+   git submodule add https://github.com/McShelby/hugo-theme-relearn.git themes/relearn
     ```
 3.  **Configura el sitio para usar el tema (Edita el archivo de configuración):**
     Abre el archivo **`config.toml`** en la raíz del proyecto y asegúrate de que tiene la siguiente línea, o una similar si usas otro formato (`.yaml` o `.json`):
     ```toml
-    baseURL = "[http://example.org/](http://example.org/)"
+    baseURL = "http://example.org/"
     languageCode = "es-es"
-    title = "Wiki de Documentación del Proyecto"
-    theme = "ananke" # Asegúrate de que este nombre coincida con la carpeta del tema
+    title = "Wiki GAS - Grupo Angel"
+    theme = "relearn"
+
+    [params]
+    description = "Documentación para desarrollo de aplicaciones internas con Google Apps Script"
+    author = "Equipo de Desarrollo"
+    showVisitedLinks = true
+    disableBreadcrumb = false
+    disableNextPrev = false
     ```
 4.  **Haz un commit inicial de la estructura de Hugo:**
     ```bash
